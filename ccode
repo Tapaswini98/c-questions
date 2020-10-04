@@ -1,0 +1,72 @@
+//WAP TO FIND THE REVERSE OF A NUMBER USING DO WHILE
+
+#include<stdio.h>
+int rev = 0, rem,n;
+int main()
+{
+    printf("enter the number:");
+    scanf("%d", &n);
+    do
+    {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+    while(n!=0);
+    {
+        printf("The reverse is : %d", rev);
+    }
+    return 0;
+}
+
+//WAP TO COUNT THE TOTAL NO. OF A DIGIT USING DO WHILE
+
+#include<stdio.h>
+long r = 0,n;
+int main()
+{
+    printf("enter the number:");
+    scanf("%ld", &n);
+    do
+    {
+        n = n / 10;
+        r++;
+    }
+    while(n!=0);
+    {
+        printf("COUNT is : %ld", r);
+    }
+    return 0;
+}
+
+
+//WAP TO CHECK THE NO IS PRIME OR NOT USING FUNCTION(NO ARGUMENT OR RETURN VALUE)
+
+#include<stdio.h>
+void checkPrimeNumber();
+int main()
+{
+    checkPrimeNumber();
+    return 0;
+}
+void checkPrimeNumber()
+{
+    int i,n,flag=0;
+    printf("enter the number: ");
+    scanf("%d", &n);
+    for(i=2;i<=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            flag=1;
+        }
+    }
+    if(flag==1)
+    {
+        printf("NOOO ITS NOT A PRIME NUMBER");
+    }
+    else
+    {
+        printf("YESS ITS A PRIME NUMBER");
+    }
+}
